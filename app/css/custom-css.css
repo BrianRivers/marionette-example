@@ -1,0 +1,35 @@
+.button-js{
+  margin-top: 15px;
+}
+
+.footer-message-js {
+  margin-left: 15px;
+}
+
+.column-headers {
+  margin-bottom: 10px;
+}
+
+.itemRow {
+  border: solid 1px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.collectionlist div:nth-child(odd){
+  background-color: #eee;
+}
+.collectionlist div:nth-child(even){
+  background-color: #ddd;
+}
+
+.row-red {
+  color: #f00;
+}
+
+.row-blue {
+  color: #009;
+}
