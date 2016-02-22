@@ -6,7 +6,8 @@ requirejs.config({
         jquery:  'jquery',
         marionette: 'backbone.marionette.min',
         underscore: 'underscore',
-        bootstrap: 'bootstrap.min'
+        bootstrap: 'bootstrap.min',
+        babel: 'babel-register'
     },
 
     shim: {
@@ -26,4 +27,4 @@ requirejs.config({
     }
 });
 
-requirejs(['app/main']);
+requirejs(['...../register']);

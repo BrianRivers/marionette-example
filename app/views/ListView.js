@@ -1,6 +1,8 @@
-define(['marionette'], function (Marionette) {
+import Backbone from 'backbone';
+import Marionette from 'backbone.marionette';
+import _ from 'lodash';
 
-  var ListItemView =  Marionette.ItemView.extend({
+var ListItemView =  Marionette.ItemView.extend({
         triggers: {
           'click' : 'rowClicked'
         },
@@ -24,21 +26,19 @@ define(['marionette'], function (Marionette) {
           '<span> <%= state %> </span></span>')
       });
 
-  var EmptyListView =  Marionette.ItemView.extend({
-        className: 'col-md-7',
-        template: _.template('No rows match this filter')
-      });
-
-  var ListCollection =  Marionette.CollectionView.extend({
-      childEvents: {
-        'rowClicked': function (view) {
-                    this.triggerMethod('itemViewClicked', view);
-                }
-      },
-      className: 'collectionlist',
-      emptyView: EmptyListView,
-      childView: ListItemView
+var EmptyListView =  Marionette.ItemView.extend({
+      className: 'col-md-7',
+      template: _.template('No rows match this filter')
     });
 
-  return ListCollection
-})
+export default Marionette.CollectionView.extend({
+    childEvents: {
+      'rowClicked': function (view) {
+                  this.triggerMethod('itemViewClicked', view);
+              }
+    },
+    className: 'collectionlist',
+    emptyView: EmptyListView,
+    childView: ListItemView
+  });
+

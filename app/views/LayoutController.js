@@ -1,5 +1,13 @@
-define(['marionette', 'app/data/testdata', 'app/views/ListView', 'app/views/FooterView'], function (Marionette, TestData, ListView, FooterView) {
-  return Marionette.LayoutView.extend({
+import Backbone from 'backbone';
+import Marionette from 'backbone.marionette';
+import _ from 'lodash';
+import TestData from '../data/testdata.js';
+import ListView from './ListView.js';
+import FooterView from './FooterView.js';
+
+var collection;
+
+ export default Marionette.LayoutView.extend({
     initialize: function () {
 
       // If you are pulling in data from the server that a region in your layout view needs, do this in the onRender function below
@@ -76,4 +84,3 @@ define(['marionette', 'app/data/testdata', 'app/views/ListView', 'app/views/Foot
         '</div>'
       )
   });
-})
