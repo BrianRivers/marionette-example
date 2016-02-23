@@ -5,8 +5,6 @@ import TestData from '../data/testdata.js';
 import ListView from './ListView.js';
 import FooterView from './FooterView.js';
 
-var collection;
-
  export default Marionette.LayoutView.extend({
     initialize: function () {
 
@@ -17,12 +15,12 @@ var collection;
         model: GenericModel
       });
 
-      this.collection = new GenericCollection(TestData)
+      let collection = new GenericCollection(TestData)
     },
 
     onRender: function () {
         this.list.show(new ListView ({
-          collection: this.collection
+          collection
         }));
     },
 

@@ -6,10 +6,10 @@ import Marionette from 'backbone.marionette';
 import _ from 'underscore';
 import LayoutController from './views/LayoutController.js';
 
-var TempItemView = Marionette.ItemView.extend({
-    tagName:'h3',
-    template: _.template('This is NOT a test!')
-  })
+// var TempItemView = Marionette.ItemView.extend({
+//     tagName:'h3',
+//     template: _.template('This is NOT a test!')
+//   })
 
 var App = new Marionette.Application();
 
@@ -30,41 +30,13 @@ var App = new Marionette.Application();
 
     App.start();
 
-// define(['marionette', 'app/views/LayoutController'], function(Marionette, LayoutController) {
-//   var TempItemView = Marionette.ItemView.extend({
-//     tagName:'h3',
-//     template: _.template('This is NOT a test!')
-//   })
+    /**  An example of how you can incorperate a Marionette view into an existing page **/
 
-//   var App = new Marionette.Application();
+  // var region = new Marionette.Region({
+  //   el: '.container-js'
+  // })
 
-//   App.on('start', function () {
+  // region.show(new TempItemView());
 
-//     // Layout Views should act as your controllers for managing child views
+  //** ------------------         End Example          ------------------ **//
 
-//     if(Backbone.history) {
-//       Backbone.history.start();
-//     }
-
-//     var RootView = new LayoutController({
-//       el: '.container-js'
-//     })
-
-//       RootView.render();
-//   })
-
-//     App.start();
-
-//   // App.container.show(new TempItemView());
-
-//   /**  An example of how you can incorperate a Marionette view into an existing page **/
-
-//   // var region = new Marionette.Region({
-//   //   el: '.container-js'
-//   // })
-
-//   // region.show(new TempItemView());
-
-//   //** ------------------         End Example          ------------------ **//
-
-// })
